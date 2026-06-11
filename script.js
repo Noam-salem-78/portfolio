@@ -619,3 +619,17 @@ const statsSection = document.getElementById('stats');
 if (statsSection) {
   counterObserver.observe(statsSection);
 }
+
+/* ================================================
+   6. BARRES DE LANGUE — animation au scroll
+   ================================================ */
+const langObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      langObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.4 });
+
+document.querySelectorAll('.lang-card').forEach(card => langObserver.observe(card));
