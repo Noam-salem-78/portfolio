@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ================================================
+       SEO & Partage social
+       Modifie la description et l'URL selon ton déploiement GitHub Pages
+       ================================================ -->
+  <title>Noam SALEM — Portfolio Digital & International Business</title>
+  <meta name="description" content="Portfolio de Noam SALEM, étudiant en Bachelor Digital & International Business à l'EMLV. Recherche alternance à partir de septembre 2026." />
+  <meta name="author" content="Noam SALEM" />
+  <meta property="og:title" content="Noam SALEM — Portfolio" />
+  <meta property="og:description" content="Profil digital, créatif et international. Recherche alternance sept. 2026." />
+  <meta property="og:type" content="website" />
+  <!-- Remplace l'URL ci-dessous par ton URL GitHub Pages une fois déployé -->
+  <meta property="og:url" content="https://ton-pseudo.github.io/portfolio-noam-salem/" />
+  <meta property="og:image" content="assets/profile.jpg" />
+
+  <!-- ================================================
+       Polices Google Fonts
+       ================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       NAVIGATION
+       ================================================ -->
+  <header class="nav-header" id="navbar">
+    <nav class="nav-container">
+      <!-- Logo / Nom -->
+      <a href="#hero" class="nav-logo">NS<span class="dot">.</span></a>
+
+      <!-- Menu desktop -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"      data-i18n="nav_about">À propos</a></li>
+        <li><a href="#experiences" data-i18n="nav_exp">Expériences</a></li>
+        <li><a href="#formation"  data-i18n="nav_edu">Formation</a></li>
+        <li><a href="#projects"   data-i18n="nav_projects">Projets</a></li>
+        <li><a href="#skills"     data-i18n="nav_skills">Compétences</a></li>
+        <li><a href="#looking-for" data-i18n="nav_looking">Je cherche</a></li>
+        <li><a href="#contact"    data-i18n="nav_contact">Contact</a></li>
+      </ul>
+
+      <!-- Boutons droite -->
+      <div class="nav-actions">
+        <!-- Bouton langue FR / EN -->
+        <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">
+          <span id="langLabel">EN</span>
+        </button>
+        <!-- Télécharger CV -->
+        <!-- Remplace le href par le chemin de ton vrai CV PDF -->
+        <a href="assets/cv-noam-salem.pdf" download class="btn btn-outline btn-sm" data-i18n="nav_cv">CV</a>
+      </div>
+
+      <!-- Hamburger mobile -->
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================================================
+         SECTION 1 — HERO
+         ================================================ -->
+    <section class="hero" id="hero">
+      <div class="hero-inner container">
+
+        <!-- Colonne gauche : texte -->
+        <div class="hero-text" data-animate>
+          <p class="hero-eyebrow" data-i18n="hero_eyebrow">Bachelor Digital & International Business · EMLV · Paris</p>
+          <h1 class="hero-name">Noam <span class="accent">SALEM</span></h1>
+          <p class="hero-tagline" data-i18n="hero_tagline">
+            Un profil digital, créatif et international,<br />
+            prêt à contribuer à des projets innovants, concrets et orientés business.
+          </p>
+          <p class="hero-sub" data-i18n="hero_sub">
+            Alternance disponible à partir du <strong>21 septembre 2026</strong> — pour un an minimum,
+            avec la volonté de construire une collaboration durable jusqu'au master.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-ctas">
+            <a href="#experiences" class="btn btn-primary" data-i18n="hero_cta1">Voir mon parcours</a>
+            <!-- Remplace le href par le chemin de ton vrai CV PDF -->
+            <a href="assets/cv-noam-salem.pdf" download class="btn btn-outline" data-i18n="hero_cta2">Télécharger mon CV</a>
+            <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta3">Me contacter</a>
+          </div>
+        </div>
+
+        <!-- Colonne droite : carte visuelle -->
+        <div class="hero-card-wrap" data-animate data-delay="200">
+          <div class="hero-card">
+            <!-- Photo placeholder — remplace assets/profile.jpg par ta vraie photo -->
+            <div class="hero-photo-wrap">
+              <img src="assets/profile.jpg" alt="Photo de Noam SALEM" class="hero-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="hero-photo-fallback">NS</div>
+            </div>
+            <!-- Tags -->
+            <div class="hero-tags">
+              <span class="tag" data-i18n="tag1">Digital Strategy</span>
+              <span class="tag" data-i18n="tag2">Innovation</span>
+              <span class="tag" data-i18n="tag3">International Business</span>
+              <span class="tag" data-i18n="tag4">Content Creation</span>
+            </div>
+            <!-- Disponibilité -->
+            <div class="hero-available">
+              <span class="available-dot"></span>
+              <span data-i18n="hero_available">Disponible sept. 2026</span>
+            </div>
+          </div>
+          <!-- Halo décoratif -->
+          <div class="hero-halo"></div>
+        </div>
+
+      </div>
+
+      <!-- Bandeau défilant -->
+      <div class="ticker-wrap" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Digital Strategy</span><span class="ticker-dot">·</span>
+          <span>Innovation</span><span class="ticker-dot">·</span>
+          <span>International Business</span><span class="ticker-dot">·</span>
+          <span>Content Creation</span><span class="ticker-dot">·</span>
+          <span>Gestion de projet</span><span class="ticker-dot">·</span>
+          <span>Business Development</span><span class="ticker-dot">·</span>
+          <span>Stratégie digitale</span><span class="ticker-dot">·</span>
+          <span>Analyse de performance</span><span class="ticker-dot">·</span>
+          <!-- Copie pour loop infinie -->
+          <span>Digital Strategy</span><span class="ticker-dot">·</span>
+          <span>Innovation</span><span class="ticker-dot">·</span>
+          <span>International Business</span><span class="ticker-dot">·</span>
+          <span>Content Creation</span><span class="ticker-dot">·</span>
+          <span>Gestion de projet</span><span class="ticker-dot">·</span>
+          <span>Business Development</span><span class="ticker-dot">·</span>
+          <span>Stratégie digitale</span><span class="ticker-dot">·</span>
+          <span>Analyse de performance</span><span class="ticker-dot">·</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 2 — À PROPOS
+         ================================================ -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-eyebrow" data-i18n="about_eyebrow">Qui suis-je ?</p>
+          <h2 class="section-title" data-i18n="about_title">À propos</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text" data-animate>
+            <p data-i18n="about_p1">
+              Je suis étudiant en 3ème année de Bachelor Digital & International Business à l'EMLV.
+              Mon parcours associe culture digitale, ouverture internationale, créativité et sens du business.
+            </p>
+            <p data-i18n="about_p2">
+              À travers mes expériences en communication digitale, vente et audiovisuel, j'ai développé
+              une capacité à comprendre un besoin, concevoir du contenu adapté, analyser des résultats
+              et travailler efficacement en équipe.
+            </p>
+            <p data-i18n="about_p3">
+              Ce qui me caractérise : une curiosité réelle pour l'innovation digitale, une forte
+              capacité d'adaptation et l'envie d'apprendre sur des sujets variés — sans pour autant
+              me disperser.
+            </p>
+            <p data-i18n="about_p4">
+              Mon objectif est de m'inscrire dans une collaboration durable : alternance bachelor
+              à partir de septembre 2026, puis poursuite en master en alternance selon les opportunités.
+            </p>
+          </div>
+
+          <!-- Cartes attributs -->
+          <div class="about-attrs" data-animate data-delay="150">
+            <div class="attr-card">
+              <span class="attr-icon">🌍</span>
+              <div>
+                <strong data-i18n="attr1_title">Profil international</strong>
+                <p data-i18n="attr1_desc">Semestre à Prague · Cours en anglais · 3 langues</p>
+              </div>
+            </div>
+            <div class="attr-card">
+              <span class="attr-icon">💡</span>
+              <div>
+                <strong data-i18n="attr2_title">Curiosité & innovation</strong>
+                <p data-i18n="attr2_desc">Hackathons · Projets créatifs · Veille digitale</p>
+              </div>
+            </div>
+            <div class="attr-card">
+              <span class="attr-icon">📊</span>
+              <div>
+                <strong data-i18n="attr3_title">Sens du business</strong>
+                <p data-i18n="attr3_desc">Analyse · Stratégie · Études de marché</p>
+              </div>
+            </div>
+            <div class="attr-card">
+              <span class="attr-icon">🤝</span>
+              <div>
+                <strong data-i18n="attr4_title">Vision long terme</strong>
+                <p data-i18n="attr4_desc">Bachelor → Master en alternance, même entreprise possible</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 3 — CHIFFRES CLÉS
+         ================================================ -->
+    <section class="section" id="stats">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-eyebrow" data-i18n="stats_eyebrow">En chiffres</p>
+          <h2 class="section-title" data-i18n="stats_title">Quelques repères</h2>
+        </div>
+
+        <div class="stats-grid">
+          <!-- Stat 1 -->
+          <div class="stat-card" data-animate>
+            <div class="stat-number">
+              +<span class="counter" data-target="200">0</span>%
+            </div>
+            <div class="stat-label" data-i18n="stat1_label">Vues Instagram</div>
+            <div class="stat-desc" data-i18n="stat1_desc">Hausse approximative des vues pendant mon stage chez Property Partners</div>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="stat-card" data-animate data-delay="100">
+            <div class="stat-number">
+              <span class="counter" data-target="2">0</span>
+            </div>
+            <div class="stat-label" data-i18n="stat2_label">Posts / semaine</div>
+            <div class="stat-desc" data-i18n="stat2_desc">Rythme moyen de publication maintenu pendant l'expérience en community management</div>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="stat-card" data-animate data-delay="200">
+            <div class="stat-number">
+              <span class="counter" data-target="3">0</span>
+            </div>
+            <div class="stat-label" data-i18n="stat3_label">Langues</div>
+            <div class="stat-desc" data-i18n="stat3_desc">Français natif · Anglais B2 · Espagnol B1</div>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="stat-card" data-animate data-delay="300">
+            <div class="stat-number">
+              <span class="counter" data-target="1">0</span>
+            </div>
+            <div class="stat-label" data-i18n="stat4_label">Semestre international</div>
+            <div class="stat-desc" data-i18n="stat4_desc">Formation à Prague en environnement 100 % anglophone</div>
+          </div>
+
+          <!-- Stat 5 -->
+          <div class="stat-card stat-card-wide" data-animate data-delay="400">
+            <div class="stat-number">3<span class="stat-unit" data-i18n="stat5_unit">ans</span></div>
+            <div class="stat-label" data-i18n="stat5_label">Collaboration possible</div>
+            <div class="stat-desc" data-i18n="stat5_desc">Alternance bachelor, puis ambition de poursuivre en master selon les opportunités</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 4 — EXPÉRIENCES
+         ================================================ -->
+    <section class="section section-alt" id="experiences">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-eyebrow" data-i18n="exp_eyebrow">Mon parcours</p>
+          <h2 class="section-title" data-i18n="exp_title">Expériences professionnelles</h2>
+        </div>
+
+        <div class="timeline">
+
+          <!-- Expérience 1 — Property Partners -->
+          <div class="timeline-item" data-animate>
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-company">Property Partners</h3>
+                  <p class="timeline-role" data-i18n="exp1_role">Community Manager · Stage</p>
+                </div>
+                <span class="timeline-date" data-i18n="exp1_date">2025 · 3 mois</span>
+              </div>
+              <p class="timeline-desc" data-i18n="exp1_desc">
+                Participation à la stratégie de communication digitale de l'agence immobilière.
+                Création de contenus photo et vidéo pour Instagram, rédaction d'annonces et
+                mise en ligne sur les plateformes. Analyse des performances et optimisation
+                de la visibilité en ligne — contribution à une hausse d'environ 200 % des vues
+                sur la période du stage.
+              </p>
+              <p class="timeline-insight" data-i18n="exp1_insight">
+                Cette expérience m'a permis de comprendre comment une structure peut renforcer
+                sa visibilité grâce à une stratégie de contenu régulière et une analyse concrète
+                des performances.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag-sm">Canva</span>
+                <span class="tag-sm">Instagram</span>
+                <span class="tag-sm" data-i18n="skill_content">Création de contenu</span>
+                <span class="tag-sm" data-i18n="skill_perf">Analyse de performance</span>
+                <span class="tag-sm" data-i18n="skill_writing">Rédaction digitale</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Expérience 2 — Lindt -->
+          <div class="timeline-item" data-animate data-delay="100">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-company">Lindt</h3>
+                  <p class="timeline-role" data-i18n="exp2_role">Conseiller de vente · CDD</p>
+                </div>
+                <span class="timeline-date" data-i18n="exp2_date">2025 · 1 mois</span>
+              </div>
+              <p class="timeline-desc" data-i18n="exp2_desc">
+                Accueil et conseil client avec une approche personnalisée, mise en valeur des
+                produits et gestion des encaissements en période de forte affluence.
+              </p>
+              <p class="timeline-insight" data-i18n="exp2_insight">
+                Cette expérience a renforcé ma compréhension de l'expérience client, du contact
+                terrain et de l'importance d'une attitude professionnelle dans un environnement
+                exigeant.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag-sm" data-i18n="skill_client">Relation client</span>
+                <span class="tag-sm" data-i18n="skill_adapt">Adaptabilité</span>
+                <span class="tag-sm" data-i18n="skill_team">Travail en équipe</span>
+                <span class="tag-sm" data-i18n="skill_rigor">Rigueur</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Expérience 3 — N121 -->
+          <div class="timeline-item" data-animate data-delay="200">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-company">N121</h3>
+                  <p class="timeline-role" data-i18n="exp3_role">Production audiovisuelle · CDD</p>
+                </div>
+                <span class="timeline-date" data-i18n="exp3_date">2024 · 1 semaine</span>
+              </div>
+              <p class="timeline-desc" data-i18n="exp3_desc">
+                Participation à un tournage professionnel : découverte des coulisses de la
+                production audiovisuelle, observation des étapes de production et collaboration
+                avec les équipes techniques et artistiques.
+              </p>
+              <p class="timeline-insight" data-i18n="exp3_insight">
+                Une première immersion dans la création de contenu professionnel qui m'a permis
+                de mieux saisir les exigences liées aux formats visuels.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag-sm" data-i18n="skill_av">Audiovisuel</span>
+                <span class="tag-sm" data-i18n="skill_creative">Créativité</span>
+                <span class="tag-sm" data-i18n="skill_coord">Coordination</span>
+                <span class="tag-sm" data-i18n="skill_rigor">Rigueur</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 5 — FORMATION
+         ================================================ -->
+    <section class="section" id="formation">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-eyebrow" data-i18n="edu_eyebrow">Académique</p>
+          <h2 class="section-title" data-i18n="edu_title">Formation</h2>
+        </div>
+
+        <div class="edu-grid">
+
+          <!-- EMLV -->
+          <div class="edu-card edu-card-main" data-animate>
+            <div class="edu-card-header">
+              <div class="edu-icon">🎓</div>
+              <div>
+                <h3 class="edu-school">EMLV</h3>
+                <p class="edu-degree" data-i18n="edu1_degree">Bachelor Digital & International Business</p>
+                <span class="edu-date" data-i18n="edu1_date">2024 – Aujourd'hui</span>
+              </div>
+            </div>
+            <ul class="edu-list">
+              <li data-i18n="edu1_li1">Marketing digital · Commerce international · Gestion de projet</li>
+              <li data-i18n="edu1_li2">Travaux d'équipe, études de cas, présentations orales</li>
+              <li data-i18n="edu1_li3">Participation à plusieurs hackathons internes sur la créativité et l'innovation</li>
+            </ul>
+          </div>
+
+          <!-- Prague -->
+          <div class="edu-card" data-animate data-delay="100">
+            <div class="edu-card-header">
+              <div class="edu-icon">🌍</div>
+              <div>
+                <h3 class="edu-school">Prague University of Economics and Business</h3>
+                <p class="edu-degree" data-i18n="edu2_degree">Semestre international</p>
+                <span class="edu-date" data-i18n="edu2_date">Fév. – Juin 2026</span>
+              </div>
+            </div>
+            <ul class="edu-list">
+              <li data-i18n="edu2_li1">Cours 100 % en anglais dans un environnement multiculturel</li>
+              <li data-i18n="edu2_li2">International Business Operations · Doing Business in a Globalized Environment</li>
+              <li data-i18n="edu2_li3">International Entrepreneurship · Adaptation culturelle</li>
+            </ul>
+            <div class="edu-badge" data-i18n="edu2_badge">🇨🇿 Environnement 100 % anglophone</div>
+          </div>
+
+          <!-- Bac -->
+          <div class="edu-card" data-animate data-delay="200">
+            <div class="edu-card-header">
+              <div class="edu-icon">📋</div>
+              <div>
+                <h3 class="edu-school" data-i18n="edu3_school">Baccalauréat Général</h3>
+                <p class="edu-degree" data-i18n="edu3_degree">Mention Bien</p>
+                <span class="edu-date" data-i18n="edu3_date">2024</span>
+              </div>
+            </div>
+            <ul class="edu-list">
+              <li data-i18n="edu3_li1">Sciences économiques et sociales (SES)</li>
+              <li data-i18n="edu3_li2">Anglais LLCER</li>
+              <li data-i18n="edu3_li3">Histoire-Géopolitique</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 6 — PROJETS & HACKATHONS
+         ================================================ -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-eyebrow" data-i18n="proj_eyebrow">Concret & créatif</p>
+          <h2 class="section-title" data-i18n="proj_title">Projets digitaux & hackathons</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Projet 1 — Hackathons -->
+          <div class="project-card" data-animate>
+            <div class="project-icon">⚡</div>
+            <h3 class="project-name" data-i18n="proj1_name">Hackathons EMLV</h3>
+            <p class="project-type" data-i18n="proj1_type">Innovation & Créativité</p>
+            <p class="project-desc" data-i18n="proj1_desc">
+              Participation à plusieurs hackathons internes à l'EMLV : idéation en équipe,
+              construction de solutions dans un temps limité, présentation orale devant jury.
+            </p>
+            <div class="project-tags">
+              <span class="tag-sm" data-i18n="proj1_t1">Idéation</span>
+              <span class="tag-sm" data-i18n="proj1_t2">Pitch</span>
+              <span class="tag-sm" data-i18n="skill_team">Travail en équipe</span>
+              <span class="tag-sm" data-i18n="skill_creative">Créativité</span>
+            </div>
+          </div>
+
+          <!-- Projet 2 — Startup -->
+          <div class="project-card" data-animate data-delay="100">
+            <div class="project-icon">⌚</div>
+            <h3 class="project-name" data-i18n="proj2_name">Projet Startup</h3>
+            <p class="project-type" data-i18n="proj2_type">Accessoire connecté · Sport & Tech</p>
+            <p class="project-desc" data-i18n="proj2_desc">
+              Développement d'un concept de startup autour des objets connectés et du sport :
+              réflexion sur le besoin utilisateur, le positionnement marché et le business model.
+            </p>
+            <div class="project-tags">
+              <span class="tag-sm" data-i18n="proj2_t1">Innovation</span>
+              <span class="tag-sm" data-i18n="proj2_t2">Business Model</span>
+              <span class="tag-sm" data-i18n="proj2_t3">Étude de marché</span>
+            </div>
+          </div>
+
+          <!-- Projet 3 — Études de marché -->
+          <div class="project-card" data-animate data-delay="200">
+            <div class="project-icon">📈</div>
+            <h3 class="project-name" data-i18n="proj3_name">Études de marché & Business plans</h3>
+            <p class="project-type" data-i18n="proj3_type">Projets académiques</p>
+            <p class="project-desc" data-i18n="proj3_desc">
+              Analyse de marché, compréhension client, positionnement concurrentiel
+              et construction de propositions de valeur dans le cadre de projets académiques.
+            </p>
+            <div class="project-tags">
+              <span class="tag-sm" data-i18n="proj3_t1">Analyse</span>
+              <span class="tag-sm" data-i18n="proj3_t2">Stratégie</span>
+              <span class="tag-sm" data-i18n="proj3_t3">Présentation</span>
+            </div>
+          </div>
+
+          <!-- Projet 4 — Contenu digital -->
+          <div class="project-card" data-animate data-delay="300">
+            <div class="project-icon">🎨</div>
+            <h3 class="project-name" data-i18n="proj4_name">Création de contenu digital</h3>
+            <p class="project-type" data-i18n="proj4_type">Visuels · Photo · Vidéo</p>
+            <p class="project-desc" data-i18n="proj4_desc">
+              Création de visuels, contenus photo/vidéo et supports de communication via Canva
+              et CapCut, dans le cadre de projets professionnels et académiques.
+            </p>
+            <div class="project-tags">
+              <span class="tag-sm">Canva</span>
+              <span class="tag-sm">CapCut</span>
+              <span class="tag-sm" data-i18n="proj4_t1">Storytelling</span>
+              <span class="tag-sm" data-i18n="proj4_t2">Communication visuelle</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Zone portfolio à venir -->
+        <div class="portfolio-coming" data-animate>
+          <div class="portfolio-coming-inner">
+            <span class="coming-icon">🖼️</span>
+            <div>
+              <strong data-i18n="coming_title">Portfolio visuel — bientôt disponible</strong>
+              <p data-i18n="coming_desc">Visuels Canva, posts Instagram et créations digitales à retrouver ici prochainement.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 7 — COMPÉTENCES
+         ================================================ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-eyebrow" data-i18n="skills_eyebrow">Ce que je maîtrise</p>
+          <h2 class="section-title" data-i18n="skills_title">Compétences</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Catégorie 1 — Digital & contenu -->
+          <div class="skill-category" data-animate>
+            <h3 class="skill-cat-title" data-i18n="cat1_title">Digital & Contenu</h3>
+            <div class="skill-list">
+              <div class="skill-badge skill-regular" data-i18n="s1_1">Création de contenu</div>
+              <div class="skill-badge skill-regular" data-i18n="s1_2">Communication digitale</div>
+              <div class="skill-badge skill-regular">Instagram</div>
+              <div class="skill-badge skill-regular" data-i18n="s1_4">Analyse de performance</div>
+              <div class="skill-badge skill-regular" data-i18n="s1_5">Rédaction digitale</div>
+              <div class="skill-badge skill-regular" data-i18n="s1_6">Mise en ligne de contenus</div>
+            </div>
+          </div>
+
+          <!-- Catégorie 2 — Business & projet -->
+          <div class="skill-category" data-animate data-delay="100">
+            <h3 class="skill-cat-title" data-i18n="cat2_title">Business & Projet</h3>
+            <div class="skill-list">
+              <div class="skill-badge skill-regular" data-i18n="s2_1">Gestion de projet</div>
+              <div class="skill-badge skill-regular" data-i18n="s2_2">Étude de marché</div>
+              <div class="skill-badge skill-regular" data-i18n="s2_3">Business plan</div>
+              <div class="skill-badge skill-regular" data-i18n="s2_4">Présentation orale</div>
+              <div class="skill-badge skill-regular" data-i18n="s2_5">Organisation</div>
+              <div class="skill-badge skill-regular" data-i18n="s2_6">Vision business</div>
+            </div>
+          </div>
+
+          <!-- Catégorie 3 — Outils -->
+          <div class="skill-category" data-animate data-delay="200">
+            <h3 class="skill-cat-title" data-i18n="cat3_title">Outils</h3>
+            <div class="skill-list">
+              <div class="skill-badge skill-regular">Microsoft 365</div>
+              <div class="skill-badge skill-regular">PowerPoint · Excel · Word</div>
+              <div class="skill-badge skill-regular">Canva</div>
+              <div class="skill-badge skill-regular">CapCut</div>
+              <div class="skill-badge skill-notions">Photoshop <span class="level-tag" data-i18n="level_notions">Notions</span></div>
+              <div class="skill-badge skill-regular" data-i18n="s3_ai">IA générative</div>
+              <div class="skill-badge skill-notions">Google Analytics <span class="level-tag" data-i18n="level_cert">Certif. passée</span></div>
+            </div>
+          </div>
+
+          <!-- Catégorie 4 — Soft skills -->
+          <div class="skill-category" data-animate data-delay="300">
+            <h3 class="skill-cat-title" data-i18n="cat4_title">Soft Skills</h3>
+            <div class="skill-list">
+              <div class="skill-badge skill-soft" data-i18n="ss1">Créativité</div>
+              <div class="skill-badge skill-soft" data-i18n="ss2">Adaptabilité</div>
+              <div class="skill-badge skill-soft" data-i18n="ss3">Travail en équipe</div>
+              <div class="skill-badge skill-soft" data-i18n="ss4">Communication</div>
+              <div class="skill-badge skill-soft" data-i18n="ss5">Rigueur</div>
+              <div class="skill-badge skill-soft" data-i18n="ss6">Organisation</div>
+              <div class="skill-badge skill-soft" data-i18n="ss7">Curiosité</div>
+              <div class="skill-badge skill-soft" data-i18n="ss8">Autonomie</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 8 — LANGUES & INTERNATIONAL
+         ================================================ -->
+    <section class="section section-alt" id="languages">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-eyebrow" data-i18n="lang_eyebrow">Ouverture internationale</p>
+          <h2 class="section-title" data-i18n="lang_title">Langues & International</h2>
+        </div>
+
+        <div class="lang-layout">
+
+          <!-- Langues -->
+          <div class="lang-cards" data-animate>
+            <div class="lang-card">
+              <div class="lang-flag">🇫🇷</div>
+              <div class="lang-info">
+                <strong data-i18n="lang1_name">Français</strong>
+                <span class="lang-level lang-native" data-i18n="lang1_level">Natif</span>
+              </div>
+            </div>
+            <div class="lang-card">
+              <div class="lang-flag">🇬🇧</div>
+              <div class="lang-info">
+                <strong data-i18n="lang2_name">Anglais</strong>
+                <span class="lang-level lang-b2">B2 · TOEFL</span>
+              </div>
+            </div>
+            <div class="lang-card">
+              <div class="lang-flag">🇪🇸</div>
+              <div class="lang-info">
+                <strong data-i18n="lang3_name">Espagnol</strong>
+                <span class="lang-level lang-b1">B1</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contexte international -->
+          <div class="lang-context" data-animate data-delay="150">
+            <p data-i18n="lang_context1">
+              Mon cursus Digital & International Business est construit autour de la dimension
+              internationale : semestre universitaire à Prague, cours entièrement dispensés en anglais,
+              projets menés avec des étudiants de cultures différentes.
+            </p>
+            <p data-i18n="lang_context2">
+              Je suis à l'aise dans un environnement multiculturel et ouvert à des missions
+              impliquant des interlocuteurs internationaux.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 9 — CENTRES D'INTÉRÊT
+         ================================================ -->
+    <section class="section" id="interests">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-eyebrow" data-i18n="int_eyebrow">Ce qui me définit aussi</p>
+          <h2 class="section-title" data-i18n="int_title">Centres d'intérêt</h2>
+        </div>
+
+        <div class="interests-grid">
+          <div class="interest-card" data-animate>
+            <span class="interest-icon">✈️</span>
+            <strong data-i18n="int1_title">Voyages</strong>
+            <p data-i18n="int1_desc">Ouverture d'esprit et curiosité pour d'autres cultures</p>
+          </div>
+          <div class="interest-card" data-animate data-delay="75">
+            <span class="interest-icon">🎬</span>
+            <strong data-i18n="int2_title">Audiovisuel</strong>
+            <p data-i18n="int2_desc">Intérêt pour la création de contenu et les formats visuels</p>
+          </div>
+          <div class="interest-card" data-animate data-delay="150">
+            <span class="interest-icon">🎭</span>
+            <strong data-i18n="int3_title">Pop culture</strong>
+            <p data-i18n="int3_desc">Compréhension des tendances et des codes générationnels</p>
+          </div>
+          <div class="interest-card" data-animate data-delay="225">
+            <span class="interest-icon">🎵</span>
+            <strong data-i18n="int4_title">Musique</strong>
+            <p data-i18n="int4_desc">Sensibilité créative et attention aux détails</p>
+          </div>
+          <div class="interest-card" data-animate data-delay="300">
+            <span class="interest-icon">🏃</span>
+            <strong data-i18n="int5_title">Running</strong>
+            <p data-i18n="int5_desc">Discipline, régularité et dépassement de soi</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 10 — CE QUE JE RECHERCHE
+         ================================================ -->
+    <section class="section section-alt" id="looking-for">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-eyebrow" data-i18n="lf_eyebrow">Pour les recruteurs</p>
+          <h2 class="section-title" data-i18n="lf_title">Ce que je recherche</h2>
+        </div>
+
+        <div class="looking-layout">
+
+          <p class="looking-intro" data-animate data-i18n="lf_intro">
+            Je recherche une alternance à partir du <strong>21 septembre 2026</strong> dans
+            un environnement digital, innovant et stimulant. Mon objectif est de contribuer
+            à des projets concrets, d'apprendre rapidement et de m'inscrire dans une
+            collaboration durable — avec la possibilité de poursuivre en master en alternance.
+          </p>
+
+          <div class="lf-cards" data-animate data-delay="150">
+            <div class="lf-card">
+              <span class="lf-icon">🚀</span>
+              <strong data-i18n="lf1_title">Projets digitaux & innovation</strong>
+            </div>
+            <div class="lf-card">
+              <span class="lf-icon">📱</span>
+              <strong data-i18n="lf2_title">Création de contenu & visibilité en ligne</strong>
+            </div>
+            <div class="lf-card">
+              <span class="lf-icon">📋</span>
+              <strong data-i18n="lf3_title">Gestion de projet & coordination</strong>
+            </div>
+            <div class="lf-card">
+              <span class="lf-icon">📊</span>
+              <strong data-i18n="lf4_title">Business development digital & analyse de marché</strong>
+            </div>
+          </div>
+
+          <p class="looking-outro" data-animate data-i18n="lf_outro">
+            Je suis ouvert à différents secteurs, tant que les missions me permettent de
+            progresser sur des sujets digitaux, business et innovants.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 11 — CONTACT
+         ================================================ -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-eyebrow" data-i18n="contact_eyebrow">Échangeons</p>
+          <h2 class="section-title section-title-light" data-i18n="contact_title">Restons en contact</h2>
+          <p class="contact-tagline" data-i18n="contact_tagline">
+            Disponible pour échanger autour d'une opportunité d'alternance et de projets digitaux à fort potentiel.
+          </p>
+        </div>
+
+        <div class="contact-cards" data-animate>
+
+          <!-- Email -->
+          <!-- Remplace l'adresse email si besoin -->
+          <a href="mailto:Noamsalem7828@gmail.com" class="contact-card">
+            <span class="contact-card-icon">✉️</span>
+            <div>
+              <strong data-i18n="contact_email_label">Email</strong>
+              <span>Noamsalem7828@gmail.com</span>
+            </div>
+          </a>
+
+          <!-- Téléphone -->
+          <!-- Remplace le numéro si besoin -->
+          <a href="tel:+33651073232" class="contact-card">
+            <span class="contact-card-icon">📞</span>
+            <div>
+              <strong data-i18n="contact_phone_label">Téléphone</strong>
+              <span>06 51 07 32 32</span>
+            </div>
+          </a>
+
+          <!-- Localisation -->
+          <div class="contact-card contact-card-static">
+            <span class="contact-card-icon">📍</span>
+            <div>
+              <strong data-i18n="contact_location_label">Localisation</strong>
+              <span>Paris</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Boutons principaux -->
+        <div class="contact-ctas" data-animate data-delay="150">
+          <a href="mailto:Noamsalem7828@gmail.com" class="btn btn-primary-light" data-i18n="contact_btn_email">
+            M'envoyer un email
+          </a>
+          <!-- Remplace le href par ton vrai CV PDF -->
+          <a href="assets/cv-noam-salem.pdf" download class="btn btn-outline-light" data-i18n="contact_btn_cv">
+            Télécharger mon CV
+          </a>
+          <!-- LinkedIn s'ouvre dans un nouvel onglet -->
+          <a href="https://www.linkedin.com/in/noam-salem"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-outline-light"
+             data-i18n="contact_btn_linkedin">
+            Voir mon LinkedIn
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">NS<span class="dot">.</span></span>
+      <p data-i18n="footer_text">© 2026 Noam SALEM · Portfolio personnel</p>
+      <a href="#hero" class="footer-top" data-i18n="footer_top">↑ Haut de page</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
